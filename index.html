@@ -1,1 +1,1046 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Novin HSE | مهندسی بهداشت حرفه‌ای و ایمنی کار</title>
+
+    <meta name="description"
+          content="Novin HSE؛ مرجع تخصصی مهندسی بهداشت حرفه‌ای، ایمنی کار، آموزش، مشاوره، ارزیابی ریسک و خدمات HSE.">
+
+    <meta name="keywords"
+          content="بهداشت حرفه‌ای, ایمنی کار, HSE, ارزیابی ریسک, MSDS, مشاوره HSE">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f7f9fb;
+            color: #17212b;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8edf1;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            color: #0b3d4f;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #1b9a73;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #34434d;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #168761;
+        }
+
+        .nav-btn {
+            background: #ef8b32;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            background: linear-gradient(135deg, #073b4c, #0d5668);
+            color: white;
+            padding: 90px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #48c795;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #dcebf0;
+            margin-bottom: 30px;
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 9px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: #ef8b32;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid #ffffff55;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #073b4c;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.12);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-card h3 {
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .hero-card p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #0b3d4f;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #697984;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e7ecef;
+            padding: 30px 23px;
+            border-radius: 15px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.08);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #e7f6f0;
+            color: #168761;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #0b3d4f;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #71808a;
+            font-size: 14px;
+        }
+
+        /* ================= TWO MAIN AREAS ================= */
+
+        .main-areas {
+            background: #ffffff;
+        }
+
+        .area-card {
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .area-card h3 {
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        .area-card p {
+            color: #e5eef1;
+        }
+
+        .occupational {
+            background: linear-gradient(135deg, #087f66, #14a37e);
+        }
+
+        .safety {
+            background: linear-gradient(135deg, #0b3d4f, #12617a);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: #f1f5f7;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        /* ================= SHOP ================= */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e6ebee;
+        }
+
+        .product-image {
+            height: 150px;
+            background: #eaf0f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            color: #0b3d4f;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #168761;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background: linear-gradient(135deg, #0b3d4f, #06303e);
+            color: white;
+            text-align: center;
+            border-radius: 22px;
+            padding: 65px 30px;
+        }
+
+        .cta h2 {
+            font-size: 31px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #dce8ec;
+            margin-bottom: 25px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #071f29;
+            color: white;
+            padding: 55px 0 25px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+        }
+
+        footer p,
+        footer li {
+            color: #b7c7cd;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+        }
+
+        .copyright {
+            border-top: 1px solid #ffffff16;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: #91a6ae;
+            font-size: 13px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 1000px) {
+
+            .cards,
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .nav {
+                min-height: 65px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards,
+            .products,
+            .service-grid,
+            .areas-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
+
+            .area-card {
+                min-height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            Novin <span>HSE</span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#occupational">بهداشت حرفه‌ای</a></li>
+                <li><a href="#safety">ایمنی</a></li>
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#shop">فروشگاه</a></li>
+                <li><a href="#articles">مقالات</a></li>
+                <li><a href="#contact" class="nav-btn">مشاوره</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div>
+
+            <h1>
+                مرجع تخصصی
+                <span>بهداشت حرفه‌ای</span>
+                و ایمنی کار
+            </h1>
+
+            <p>
+                Novin HSE ارائه‌دهنده دانش تخصصی، خدمات مهندسی،
+                آموزش و راهکارهای نوین در حوزه بهداشت حرفه‌ای،
+                ایمنی و HSE صنایع.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#services" class="btn btn-primary">
+                    مشاهده خدمات
+                </a>
+
+                <a href="#shop" class="btn btn-outline">
+                    ورود به فروشگاه
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <h3>Novin HSE</h3>
+
+            <p>
+                دانش تخصصی برای محیط کاری سالم‌تر،
+                ایمن‌تر و حرفه‌ای‌تر.
+            </p>
+
+            <br>
+
+            <p>
+                ✓ مشاوره تخصصی<br>
+                ✓ اندازه‌گیری عوامل زیان‌آور<br>
+                ✓ ارزیابی ریسک<br>
+                ✓ آموزش و خدمات HSE
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TWO AREAS ================= -->
+
+<section class="main-areas">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>دو حوزه تخصصی Novin HSE</h2>
+
+            <p>
+                دانش، خدمات و منابع تخصصی در دو حوزه اصلی
+            </p>
+
+        </div>
+
+
+        <div class="areas-grid">
+
+            <div class="area-card occupational" id="occupational">
+
+                <div>
+
+                    <h3>بهداشت حرفه‌ای</h3>
+
+                    <p>
+                        کنترل و پیشگیری از عوامل زیان‌آور محیط کار،
+                        ارگونومی، عوامل فیزیکی، شیمیایی و بیولوژیکی
+                        و ارتقای سلامت کارکنان.
+                    </p>
+
+                </div>
+
+                <a href="#" class="btn btn-outline">
+                    ورود به بخش بهداشت حرفه‌ای
+                </a>
+
+            </div>
+
+
+            <div class="area-card safety" id="safety">
+
+                <div>
+
+                    <h3>ایمنی کار</h3>
+
+                    <p>
+                        پیشگیری از حوادث، ارزیابی ریسک،
+                        دستورالعمل‌های ایمنی، MSDS، JSA
+                        و مدیریت ایمنی در محیط‌های صنعتی.
+                    </p>
+
+                </div>
+
+                <a href="#" class="btn btn-outline">
+                    ورود به بخش ایمنی
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>خدمات تخصصی</h2>
+
+            <p>
+                راهکارهای مهندسی و مشاوره‌ای برای صنایع
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="card">
+
+                <div class="icon">📊</div>
+
+                <h3>اندازه‌گیری عوامل زیان‌آور</h3>
+
+                <p>
+                    اندازه‌گیری و ارزیابی عوامل فیزیکی،
+                    شیمیایی و سایر عوامل زیان‌آور شغلی.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚠️</div>
+
+                <h3>ارزیابی ریسک</h3>
+
+                <p>
+                    شناسایی خطرات، ارزیابی ریسک و ارائه
+                    راهکارهای کنترلی مناسب.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔧</div>
+
+                <h3>بازرسی فنی</h3>
+
+                <p>
+                    ارائه خدمات بازرسی و بررسی وضعیت
+                    تجهیزات و شرایط ایمنی محیط کار.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🎓</div>
+
+                <h3>آموزش HSE</h3>
+
+                <p>
+                    آموزش‌های تخصصی و کاربردی برای کارکنان
+                    و کارشناسان صنایع.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">💼</div>
+
+                <h3>مشاوره تخصصی</h3>
+
+                <p>
+                    ارائه مشاوره تخصصی در حوزه بهداشت حرفه‌ای
+                    و ایمنی کار.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📋</div>
+
+                <h3>تهیه مستندات HSE</h3>
+
+                <p>
+                    تهیه دستورالعمل‌ها، چک‌لیست‌ها،
+                    فرم‌ها و مستندات تخصصی.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section id="shop">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>فروشگاه Novin HSE</h2>
+
+            <p>
+                فایل‌ها و منابع تخصصی HSE
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+            <div class="product">
+
+                <div class="product-image">📄</div>
+
+                <div class="product-info">
+
+                    <h3>پاورپوینت‌های آموزشی HSE</h3>
+
+                    <p>
+                        فایل‌های آموزشی تخصصی
+                    </p>
+
+                    <div class="price">
+                        مشاهده محصول
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">🧪</div>
+
+                <div class="product-info">
+
+                    <h3>MSDS مواد شیمیایی</h3>
+
+                    <p>
+                        برگه‌های اطلاعات ایمنی مواد
+                    </p>
+
+                    <div class="price">
+                        مشاهده محصول
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">📋</div>
+
+                <div class="product-info">
+
+                    <h3>فرم‌ها و چک‌لیست‌ها</h3>
+
+                    <p>
+                        مستندات آماده HSE
+                    </p>
+
+                    <div class="price">
+                        مشاهده محصول
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">🦺</div>
+
+                <div class="product-info">
+
+                    <h3>تجهیزات حفاظت فردی</h3>
+
+                    <p>
+                        تجهیزات ایمنی و PPE
+                    </p>
+
+                    <div class="price">
+                        مشاهده محصولات
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ARTICLES ================= -->
+
+<section class="services" id="articles">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>آخرین مطالب تخصصی</h2>
+
+            <p>
+                مقالات و مطالب آموزشی Novin HSE
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🔊</div>
+
+                <h3>اندازه‌گیری صدا در محیط کار</h3>
+
+                <p>
+                    آشنایی با اصول اندازه‌گیری و ارزیابی
+                    مواجهه شغلی با صدا.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔥</div>
+
+                <h3>استرس گرمایی</h3>
+
+                <p>
+                    عوامل مؤثر بر استرس گرمایی و روش‌های
+                    کنترل آن در محیط کار.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🧤</div>
+
+                <h3>انتخاب PPE مناسب</h3>
+
+                <p>
+                    اصول انتخاب تجهیزات حفاظت فردی
+                    متناسب با خطرات شغلی.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚙️</div>
+
+                <h3>ارزیابی ریسک</h3>
+
+                <p>
+                    آشنایی با روش‌های شناسایی خطرات
+                    و ارزیابی ریسک.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <h2>
+                برای پروژه HSE خود مشاوره می‌خواهید؟
+            </h2>
+
+            <p>
+                اطلاعات پروژه خود را ارسال کنید تا کارشناسان
+                Novin HSE با شما تماس بگیرند.
+            </p>
+
+            <a href="mailto:info@novinhse.ir" class="btn btn-primary">
+                درخواست مشاوره
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Novin HSE</h3>
+
+                <p>
+                    مرجع تخصصی مهندسی بهداشت حرفه‌ای،
+                    ایمنی کار و خدمات HSE.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>دسترسی سریع</h3>
+
+                <ul>
+
+                    <li><a href="#home">صفحه اصلی</a></li>
+
+                    <li><a href="#occupational">
+                        بهداشت حرفه‌ای
+                    </a></li>
+
+                    <li><a href="#safety">
+                        ایمنی
+                    </a></li>
+
+                    <li><a href="#services">
+                        خدمات
+                    </a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>فروشگاه</h3>
+
+                <ul>
+
+                    <li>پاورپوینت</li>
+
+                    <li>MSDS</li>
+
+                    <li>فرم‌ها</li>
+
+                    <li>PPE</li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>ارتباط با ما</h3>
+
+                <ul>
+
+                    <li>ایمیل: info@novinhse.ir</li>
+
+                    <li>مشاوره تخصصی</li>
+
+                    <li>درخواست پیش‌فاکتور</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Novin HSE — تمامی حقوق محفوظ است.
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
