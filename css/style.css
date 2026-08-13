@@ -20,63 +20,160 @@ a {
     color: inherit;
 }
 
+button {
+    font-family: inherit;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #e8edf1;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e5ebee;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(12px);
 }
 
 .nav {
-    min-height: 78px;
+    min-height: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .logo {
     font-size: 25px;
     font-weight: 900;
     color: #0b3d4f;
     white-space: nowrap;
+    letter-spacing: -0.5px;
 }
 
 .logo span {
-    color: #1b9a73;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-nav a {
-    font-size: 14px;
-    font-weight: 600;
-    color: #34434d;
-    transition: .3s;
-}
-
-nav a:hover {
     color: #168761;
 }
 
+
+/* =========================
+   MAIN NAVIGATION
+========================= */
+
+.main-nav {
+    margin-right: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.main-nav a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #34434d;
+    transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #168761;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #168761;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   NAV ACTIONS
+========================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: #ef8b32;
     color: white !important;
-    padding: 10px 18px;
-    border-radius: 8px;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
+
+.nav-btn:hover {
+    background: #df7720;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #dfe7ea;
+    background: #ffffff;
+    border-radius: 9px;
+    cursor: pointer;
+    padding: 9px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0b3d4f;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     background: linear-gradient(135deg, #073b4c, #0d5668);
@@ -86,7 +183,7 @@ nav a:hover {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
     gap: 60px;
 }
@@ -119,7 +216,7 @@ nav a:hover {
     padding: 13px 25px;
     border-radius: 9px;
     font-weight: bold;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .btn-primary {
@@ -142,8 +239,8 @@ nav a:hover {
 }
 
 .hero-card {
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 35px;
     border-radius: 20px;
     backdrop-filter: blur(8px);
@@ -158,6 +255,11 @@ nav a:hover {
     font-size: 15px;
     margin-bottom: 0;
 }
+
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 80px 0;
@@ -178,6 +280,11 @@ section {
     color: #697984;
 }
 
+
+/* =========================
+   CARDS
+========================= */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -189,12 +296,12 @@ section {
     border: 1px solid #e7ecef;
     padding: 30px 23px;
     border-radius: 15px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .icon {
@@ -220,6 +327,11 @@ section {
     color: #71808a;
     font-size: 14px;
 }
+
+
+/* =========================
+   MAIN AREAS
+========================= */
 
 .main-areas {
     background: #ffffff;
@@ -258,6 +370,11 @@ section {
     gap: 25px;
 }
 
+
+/* =========================
+   SERVICES
+========================= */
+
 .services {
     background: #f1f5f7;
 }
@@ -267,6 +384,11 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
 }
+
+
+/* =========================
+   PRODUCTS
+========================= */
 
 .products {
     display: grid;
@@ -306,6 +428,11 @@ section {
     margin: 10px 0;
 }
 
+
+/* =========================
+   CTA
+========================= */
+
 .cta {
     background: linear-gradient(135deg, #0b3d4f, #06303e);
     color: white;
@@ -323,6 +450,11 @@ section {
     color: #dce8ec;
     margin-bottom: 25px;
 }
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #071f29;
@@ -364,6 +496,11 @@ footer li {
     font-size: 13px;
 }
 
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1000px) {
 
     .cards,
@@ -383,7 +520,25 @@ footer li {
         grid-template-columns: 1fr;
     }
 
+    .main-nav ul {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .nav-btn {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
@@ -391,13 +546,32 @@ footer li {
         width: 92%;
     }
 
+
+    /* Header */
+
     .nav {
-        min-height: 65px;
+        min-height: 68px;
+        gap: 15px;
     }
 
-    nav {
+    .logo {
+        font-size: 22px;
+    }
+
+    .main-nav {
         display: none;
     }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* Hero */
 
     .hero {
         padding: 60px 0;
@@ -411,6 +585,9 @@ footer li {
         font-size: 16px;
     }
 
+
+    /* Grids */
+
     .cards,
     .products,
     .service-grid,
@@ -418,6 +595,9 @@ footer li {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* Sections */
 
     section {
         padding: 60px 0;
@@ -427,7 +607,11 @@ footer li {
         font-size: 27px;
     }
 
+
+    /* Areas */
+
     .area-card {
         min-height: 220px;
     }
+
 }
