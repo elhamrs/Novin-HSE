@@ -558,13 +558,58 @@ footer li {
         font-size: 22px;
     }
 
+
+    /* Mobile Navigation */
+
     .main-nav {
         display: none;
     }
 
+    .main-nav.active {
+        display: block;
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        background: #ffffff;
+        border-top: 1px solid #e5ebee;
+        border-bottom: 1px solid #e5ebee;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        padding: 15px 0;
+    }
+
+    .main-nav.active ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 92%;
+        margin: auto;
+    }
+
+    .main-nav.active li {
+        width: 100%;
+    }
+
+    .main-nav.active a {
+        display: block;
+        width: 100%;
+        padding: 12px 5px;
+        font-size: 14px;
+    }
+
+    .main-nav.active a::after {
+        display: none;
+    }
+
+
+    /* Navigation Button */
+
     .nav-btn {
         display: none;
     }
+
+
+    /* Menu Toggle */
 
     .menu-toggle {
         display: block;
